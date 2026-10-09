@@ -1,0 +1,162 @@
+[
+  {
+    "n": 1,
+    "id": "1609.02612",
+    "url": "https://arxiv.org/abs/1609.02612",
+    "title": "Generating Videos with Scene Dynamics",
+    "date": "2016-09-08",
+    "source": "arxiv"
+  },
+  {
+    "n": 2,
+    "id": "1611.06624",
+    "url": "https://arxiv.org/abs/1611.06624",
+    "title": "Temporal Generative Adversarial Nets with Singular Value Clipping",
+    "date": "2016-11-21",
+    "source": "arxiv"
+  },
+  {
+    "n": 3,
+    "id": "1611.10314",
+    "url": "https://arxiv.org/abs/1611.10314",
+    "title": "Sync-DRAW: Automatic Video Generation using Deep Recurrent Attentive Architectures",
+    "date": "2017-10-21",
+    "source": "arxiv"
+  },
+  {
+    "n": 4,
+    "id": "1707.04993",
+    "url": "https://arxiv.org/abs/1707.04993",
+    "title": "MoCoGAN: Decomposing Motion and Content for Video Generation",
+    "date": "2017-07-16",
+    "source": "arxiv"
+  },
+  {
+    "n": 5,
+    "id": "1710.00421",
+    "url": "https://arxiv.org/abs/1710.00421",
+    "title": "Video Generation From Text",
+    "date": "2017-10-01",
+    "source": "arxiv"
+  },
+  {
+    "n": 6,
+    "id": "1804.08264",
+    "url": "https://arxiv.org/abs/1804.08264",
+    "title": "Generating Videos from Captions",
+    "date": "2018-04-22",
+    "source": "arxiv"
+  },
+  {
+    "n": 7,
+    "id": "1511.02793",
+    "url": "https://arxiv.org/abs/1511.02793",
+    "title": "Generating Images from Captions with Attention",
+    "date": "2016-02-29",
+    "source": "arxiv"
+  },
+  {
+    "n": 8,
+    "id": "2411.13503",
+    "url": "https://arxiv.org/abs/2411.13503",
+    "title": "VBench++: Comprehensive and Versatile Benchmark Suite for Video Generative Models",
+    "date": "2024-11-20",
+    "source": "arxiv"
+  },
+  {
+    "n": 9,
+    "id": "2407.14505",
+    "url": "https://huggingface.co/papers/2407.14505",
+    "title": "T2V-CompBench: A Comprehensive Benchmark for Compositional Text-to-video Generation",
+    "date": "2024-07-19",
+    "source": "hf-search"
+  },
+  {
+    "n": 10,
+    "id": "2503.21755",
+    "url": "https://huggingface.co/papers/2503.21755",
+    "title": "VBench-2.0: Advancing Video Generation Benchmark Suite for Intrinsic Faithfulness",
+    "date": "2025-03-27",
+    "source": "hf-search"
+  },
+  {
+    "n": 11,
+    "id": "2504.04907",
+    "url": "https://arxiv.org/html/2504.04907",
+    "title": "Video-Bench: Human-Aligned Video Generation Benchmark",
+    "date": "2025-04-29",
+    "source": "web"
+  },
+  {
+    "n": 12,
+    "id": "unknown",
+    "url": "https://openaccess.thecvf.com/content/CVPR2026W/VGBE/papers/Safavigerdini_Generative_AI_Video_Evaluation_Survey_of_Metrics_Benchmarks_and_Trustworthiness_CVPRW_2026_paper.pdf",
+    "title": "Generative AI Video Evaluation: Survey of Metrics, Benchmarks, and Trustworthiness",
+    "date": "unknown",
+    "source": "web"
+  },
+  {
+    "n": 13,
+    "id": "unknown",
+    "url": "https://link.springer.com/article/10.1007/s10462-025-11331-6",
+    "title": "Video diffusion generation: comprehensive review and open ...",
+    "date": "2025-08-20",
+    "source": "web"
+  },
+  {
+    "n": 14,
+    "id": "unknown",
+    "url": "https://arxiv.org/abs/2610.00812",
+    "title": "Video Generation Models: A Survey of Post-Training and Alignment",
+    "date": "2026-09-30",
+    "source": "arxiv"
+  },
+  {
+    "n": 15,
+    "id": "2507.16869",
+    "url": "https://huggingface.co/papers/2507.16869",
+    "title": "Controllable Video Generation: A Survey",
+    "date": "2025-07-22",
+    "source": "hf-search"
+  },
+  {
+    "n": 16,
+    "id": "2508.03694",
+    "url": "https://huggingface.co/papers/2508.03694",
+    "title": "LongVie: Multimodal-Guided Controllable Ultra-Long Video Generation",
+    "date": "2025-08-05",
+    "source": "hf-search"
+  },
+  {
+    "n": 17,
+    "id": "1502.04623",
+    "url": "https://arxiv.org/abs/1502.04623",
+    "title": "DRAW: A Recurrent Neural Network For Image Generation",
+    "date": "2015-02-20",
+    "source": "arxiv"
+  },
+  {
+    "n": 18,
+    "id": "2405.19334",
+    "url": "https://arxiv.org/abs/2405.19334",
+    "title": "LLMs Meet Multimodal Generation and Editing: A Survey",
+    "date": "2024-05-29",
+    "source": "arxiv"
+  },
+  {
+    "n": 19,
+    "id": "2306.02018",
+    "url": "https://huggingface.co/papers/2306.02018",
+    "title": "VideoComposer: Compositional Video Synthesis with Motion Controllability",
+    "date": "2023-06-03",
+    "source": "hf-search"
+  },
+  {
+    "n": 20,
+    "id": "2512.13604",
+    "url": "https://huggingface.co/papers/2512.13604",
+    "title": "LongVie 2: Multimodal Controllable Ultra-Long Video World Model",
+    "date": "2025-12-15",
+    "source": "hf-search"
+  }
+]

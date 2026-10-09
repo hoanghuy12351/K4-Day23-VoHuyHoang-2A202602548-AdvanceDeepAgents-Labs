@@ -18,7 +18,7 @@ Sau lab, bạn có thể:
 
 ```mermaid
 flowchart TD
-    U["python research.py &quot;survey about world model&quot;"] --> S["open_sandbox() - Daytona"]
+    U["python research.py &quot;survey about world model&quot;"] --> S["open_sandbox() - Daytona or Docker"]
     S --> L["Lead agent: write_todos, chia N câu hỏi con"]
     L -->|task x N, song song| R["researcher subagents"]
     R --> T1["arxiv_search"]
@@ -97,10 +97,13 @@ Kết quả nằm ở `reports/survey-about-world-model.md` cùng `.sources.json
 - Chạy đủ **5 chủ đề** trong [`topics.md`](topics.md), mỗi chủ đề một lần.
 - Commit mã nguồn và toàn bộ `reports/`, đẩy lên một **public repo** GitHub và nộp link.
 - Kiểm tra trước khi nộp: chạy **`python self_check.py`** (không tốn token): nó kiểm tra đủ 5 báo cáo, `meta.json`, trích dẫn bằng `check_citations.py` của bạn, và không có `.env`/khóa nào trong git.
+- `self_check.py` chỉ kiểm tra phần tự động; hãy đối chiếu một số khẳng định và số liệu với nguồn gốc. Nếu báo cáo sai, chạy lại hệ thống để tạo báo cáo mới; không sửa tay nội dung đã sinh.
+- Trên PowerShell, để tạo lại riêng một chủ đề sau khi sửa prompt, chạy `.\run_all.ps1 -ForceTopic "survey about world model"`. Lệnh này bỏ qua bốn chủ đề khác và sẽ gọi API cho chủ đề được chọn.
 - Cách chấm: xem [`RUBRIC.md`](RUBRIC.md).
 
 ## 7. Thời gian, chi phí và an toàn
 
+- Nếu sau bước hoàn thiện trích dẫn báo cáo còn dưới ba họ nguồn, runner cho lead một lượt sửa bổ sung trong cùng sandbox. Lượt này cũng gọi mô hình và có thể phát sinh thêm phí.
 - Dùng một mô hình **rẻ nhưng hỗ trợ tool calling**, và **đặt giới hạn** (số lần gọi mô hình/công cụ cho lead và subagent, `recursion_limit`): một prompt hỏng có thể khiến agent lặp rất lâu. Đây là hạng mục 2.5 của `RUBRIC.md`.
 - Kết quả có tính ngẫu nhiên: cùng một mã có thể cho báo cáo hợp lệ ở lần này và trích dẫn lỗi ở lần sau. Hãy sửa **prompt và mã**, không sửa tay báo cáo.
 

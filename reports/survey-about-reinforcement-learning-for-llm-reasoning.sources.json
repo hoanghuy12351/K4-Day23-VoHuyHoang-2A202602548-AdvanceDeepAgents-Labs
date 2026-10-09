@@ -1,0 +1,82 @@
+[
+  {
+    "n": 1,
+    "id": "2203.02155",
+    "url": "https://arxiv.org/abs/2203.02155",
+    "title": "Training language models to follow instructions with human feedback",
+    "date": "2022-03-04",
+    "source": "arxiv"
+  },
+  {
+    "n": 2,
+    "id": "unknown",
+    "url": "https://v1.endtoend.ai/papers/proximal-policy-optimization-algorithms.pdf",
+    "title": "Proximal Policy Optimization Algorithms",
+    "date": "unknown",
+    "source": "web"
+  },
+  {
+    "n": 3,
+    "id": "2502.14768",
+    "url": "https://arxiv.org/abs/2502.14768",
+    "title": "Logic-RL: Unleashing LLM Reasoning with Rule-Based Reinforcement Learning",
+    "date": "2025-02-20",
+    "source": "arxiv"
+  },
+  {
+    "n": 4,
+    "id": "2506.09942",
+    "url": "https://arxiv.org/abs/2506.09942",
+    "title": "Verification Engineering for Reinforcement Learning in Instruction Following",
+    "date": "unknown",
+    "source": "web"
+  },
+  {
+    "n": 5,
+    "id": "2508.08221",
+    "url": "https://huggingface.co/papers/2508.08221",
+    "title": "Part I: Tricks or Traps? A Deep Dive into RL for LLM Reasoning",
+    "date": "2025-08-11",
+    "source": "hf-search"
+  },
+  {
+    "n": 6,
+    "id": "unknown",
+    "url": "https://www.cs.columbia.edu/~blei/fogm/readings/RafailovSharmaMitchellErmonManningFinn2023.pdf",
+    "title": "Direct Preference Optimization: Your Language Model is Secretly a Reward Model",
+    "date": "unknown",
+    "source": "web"
+  },
+  {
+    "n": 7,
+    "id": "2506.08989",
+    "url": "https://huggingface.co/papers/2506.08989",
+    "title": "SwS: Self-aware Weakness-driven Problem Synthesis in Reinforcement Learning for LLM Reasoning",
+    "date": "2025-06-10",
+    "source": "hf-search"
+  },
+  {
+    "n": 8,
+    "id": "2505.02686",
+    "url": "https://arxiv.org/abs/2505.02686",
+    "title": "Sailing by the Stars: A Survey on Reward Models and Learning Strategies for Learning from Rewards",
+    "date": "2025-06-12",
+    "source": "web"
+  },
+  {
+    "n": 9,
+    "id": "2503.22732",
+    "url": "https://arxiv.org/abs/2503.22732",
+    "title": "Reasoning Beyond Limits: Advances and Open Problems for LLMs",
+    "date": "2025-03-26",
+    "source": "web"
+  },
+  {
+    "n": 10,
+    "id": "2501.09686",
+    "url": "https://arxiv.org/abs/2501.09686",
+    "title": "Towards Large Reasoning Models: A Survey of Reinforced Reasoning with Large Language Models",
+    "date": "unknown",
+    "source": "web"
+  }
+]

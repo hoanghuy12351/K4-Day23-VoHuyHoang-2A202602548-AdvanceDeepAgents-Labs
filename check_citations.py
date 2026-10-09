@@ -5,6 +5,7 @@ research.py uploads this file to the sandbox and the lead agent runs it with the
 It must exit 0 and print "OK: ..." when the report is consistent, else print each problem and exit 1.
 """
 import json
+import re
 import sys
 
 REPORT = "/tmp/work/report/report.md"
@@ -12,27 +13,97 @@ SOURCES = "/tmp/work/research/sources.json"
 
 
 def check(report_text, sources):
-    """Return a list of problem strings (empty list = OK).
+    """Return structural citation problems; an empty list means valid."""
+    problems = []
+    if not isinstance(sources, list) or not sources:
+        return ["no sources in sources.json"]
 
-    PSEUDO-CODE:
-      problems = []
-      if sources is empty: return ["no sources in sources.json"]
-      for each source entry:
-          n must be an int                       -> problem if not
-          url must start with http:// or https://-> problem if not
-          the same url must not appear twice     -> problem if duplicated
-      split report_text at the heading "## References":
-          body = text before it; if the heading is missing -> problem
-      cited = set of numbers found as [n] in the BODY only (not in the reference list; use a regex)
-      every number in `cited` must exist in sources -> problem "[n] cited but missing from sources.json"
-      every source number must be in `cited`        -> problem "source [n] never cited"
-      the lines of the References section that start with "[n]" (regex) are the reference lines:
-          every source needs exactly ONE reference line (none missing, no number twice, no number that is not a source)
-          each reference line holds exactly ONE http(s) URL and it must equal that source's url
-          (a line bundling several sources under one number is a problem)
-      return problems
-    """
-    raise NotImplementedError("TODO: implement check()")
+    by_number = {}
+    seen_urls = set()
+    for index, source in enumerate(sources, 1):
+        if not isinstance(source, dict):
+            problems.append(f"source {index} is not an object")
+            continue
+        number, url = source.get("n"), source.get("url")
+        if type(number) is not int:
+            problems.append(f"source {index} has a non-integer n")
+        elif number < 1:
+            problems.append(f"source {index} has a non-positive n")
+        elif number in by_number:
+            problems.append(f"source [{number}] is duplicated in sources.json")
+        else:
+            by_number[number] = source
+        if not isinstance(url, str) or not url.startswith(("http://", "https://")):
+            problems.append(f"source {index} has an invalid url")
+        elif url in seen_urls:
+            problems.append(f"source {index} repeats url {url}")
+        else:
+            seen_urls.add(url)
+        family = source.get("source")
+        expected_prefix = {
+            "arxiv": "https://arxiv.org/abs/",
+            "hf-daily": "https://huggingface.co/papers/",
+            "hf-search": "https://huggingface.co/papers/",
+        }.get(family)
+        if family not in {"arxiv", "hf-daily", "hf-search", "web"}:
+            problems.append(f"source [{number}] has invalid family {family!r}")
+        elif expected_prefix and isinstance(url, str) and not url.startswith(expected_prefix):
+            problems.append(
+                f"source [{number}] labeled {family} has URL {url!r}; "
+                f"use the tool's canonical URL starting with {expected_prefix} "
+                "or restore the actual source tool label"
+            )
+    if sorted(by_number) != list(range(1, len(sources) + 1)):
+        problems.append("source numbers must be consecutive starting at 1")
+
+    heading = re.search(r"(?m)^##[ \t]+References[ \t]*$", report_text)
+    if heading is None:
+        problems.append("missing ## References heading")
+        body, references = report_text, ""
+    else:
+        body, references = report_text[:heading.start()], report_text[heading.end():]
+
+    # Fenced and inline code are examples, not claims. Markdown links are not citations.
+    body = re.sub(r"(?ms)^ {0,3}(```|~~~).*?^ {0,3}\1[^\n]*$", "", body)
+    body = re.sub(r"`[^`\n]*`", "", body)
+    citation = re.compile(r"\[(\d+(?:\s*[,–-]\s*\d+)*)\](?!\s*\()")
+    cited = set()
+    for match in citation.finditer(body):
+        for part in re.split(r"\s*,\s*", match.group(1)):
+            span = re.fullmatch(r"(\d+)\s*[–-]\s*(\d+)", part)
+            if span:
+                start, end = map(int, span.groups())
+                if end < start or end - start > 200:
+                    problems.append(f"invalid citation range [{part}]")
+                    continue
+                cited.update(range(start, end + 1))
+            else:
+                cited.add(int(part))
+
+    for number in sorted(cited - by_number.keys()):
+        problems.append(f"[{number}] cited but missing from sources.json")
+    for number in sorted(by_number.keys() - cited):
+        problems.append(f"source [{number}] never cited")
+
+    reference_counts = {}
+    for line in references.splitlines():
+        match = re.match(r"^\s*\[(\d+)\](.*)$", line)
+        if not match:
+            continue
+        number, detail = int(match.group(1)), match.group(2)
+        reference_counts[number] = reference_counts.get(number, 0) + 1
+        if number not in by_number:
+            problems.append(f"reference [{number}] is missing from sources.json")
+        urls = re.findall(r"https?://[^\s<>]+", detail)
+        if len(urls) != 1:
+            problems.append(f"reference [{number}] must contain exactly one URL")
+        elif number in by_number and urls[0] != by_number[number].get("url"):
+            problems.append(f"reference [{number}] URL does not match sources.json")
+    for number in sorted(by_number):
+        count = reference_counts.get(number, 0)
+        if count != 1:
+            problems.append(f"source [{number}] needs exactly one reference line (found {count})")
+    return problems
 
 
 def main(argv):

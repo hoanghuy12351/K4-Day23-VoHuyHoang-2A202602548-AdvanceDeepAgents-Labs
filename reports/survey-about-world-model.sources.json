@@ -1,0 +1,114 @@
+[
+  {
+    "n": 1,
+    "id": "1803.10122",
+    "url": "https://arxiv.org/abs/1803.10122",
+    "title": "World Models",
+    "date": "2018-03-27",
+    "source": "arxiv"
+  },
+  {
+    "n": 2,
+    "id": "1912.01603",
+    "url": "https://ar5iv.labs.arxiv.org/html/1912.01603",
+    "title": "Dream to Control: Learning Behaviors by Latent Imagination",
+    "date": "unknown",
+    "source": "web"
+  },
+  {
+    "n": 3,
+    "id": "2010.02193",
+    "url": "https://arxiv.org/abs/2010.02193",
+    "title": "Mastering Atari with Discrete World Models",
+    "date": "unknown",
+    "source": "web"
+  },
+  {
+    "n": 4,
+    "id": "2410.18072",
+    "url": "https://arxiv.org/abs/2410.18072",
+    "title": "WorldSimBench: Towards Video Generation Models as World Simulators",
+    "date": "2024-10-23",
+    "source": "web"
+  },
+  {
+    "n": 5,
+    "id": "web",
+    "url": "https://papers.neurips.cc/paper_files/paper/2025/file/4ec03ed08a3fcb59e1c815b5598beff1-Paper-Datasets_and_Benchmarks_Track.pdf",
+    "title": "WorldModelBench: Judging Video Generation Models As World Models",
+    "date": "unknown",
+    "source": "web"
+  },
+  {
+    "n": 6,
+    "id": "web",
+    "url": "https://worldmodelbench-team.github.io/",
+    "title": "WorldModelBench",
+    "date": "unknown",
+    "source": "web"
+  },
+  {
+    "n": 7,
+    "id": "2503.18945",
+    "url": "https://arxiv.org/abs/2503.18945",
+    "title": "Aether: Geometric-Aware Unified World Modeling",
+    "date": "2025-03-25",
+    "source": "web"
+  },
+  {
+    "n": 8,
+    "id": "2504.12369",
+    "url": "https://arxiv.org/abs/2504.12369",
+    "title": "WorldMem: Long-term Consistent World Simulation with Memory",
+    "date": "2025-04-??",
+    "source": "web"
+  },
+  {
+    "n": 9,
+    "id": "2505.05495",
+    "url": "https://arxiv.org/html/2505.05495v1",
+    "title": "Learning 3D Persistent Embodied World Models",
+    "date": "2025-05-05",
+    "source": "web"
+  },
+  {
+    "n": 10,
+    "id": "arxiv:2606.15032v2",
+    "url": "https://arxiv.org/abs/2606.15032v2",
+    "title": "How Should World Models Be Evaluated for Embodied Decision-Making?A Decision-Making-Centric Position",
+    "date": "2026-06-28",
+    "source": "web"
+  },
+  {
+    "n": 11,
+    "id": "web",
+    "url": "https://arxiv.org/html/2605.25874",
+    "title": "WBench: A Comprehensive Multi-turn Benchmark for Interactive Video World Model Evaluation",
+    "date": "unknown",
+    "source": "web"
+  },
+  {
+    "n": 12,
+    "id": "1809.01999",
+    "url": "https://arxiv.org/abs/1809.01999",
+    "title": "Recurrent World Models Facilitate Policy Evolution",
+    "date": "2018-09-04",
+    "source": "arxiv"
+  },
+  {
+    "n": 13,
+    "id": "1801.00690",
+    "url": "https://arxiv.org/abs/1801.00690",
+    "title": "DeepMind Control Suite",
+    "date": "unknown",
+    "source": "web"
+  },
+  {
+    "n": 14,
+    "id": "2509.22642",
+    "url": "https://huggingface.co/papers/2509.22642",
+    "title": "WoW: Towards a World omniscient World model Through Embodied Interaction",
+    "date": "2025-09-26",
+    "source": "hf-search"
+  }
+]
