@@ -17,19 +17,19 @@
   },
   {
     "n": 3,
-    "id": "rJeXCo0cYX",
-    "url": "https://openreview.net/forum?id=rJeXCo0cYX",
-    "title": "BabyAI: A Platform to Study the Sample Efficiency of Grounded Language Learning",
-    "date": "unknown",
+    "id": "2210.03629",
+    "url": "https://arxiv.org/abs/2210.03629",
+    "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+    "date": "2023-03-10",
     "source": "web"
   },
   {
     "n": 4,
-    "id": "2010.03768",
-    "url": "https://arxiv.org/abs/2010.03768",
-    "title": "ALFWorld: Aligning Text and Embodied Environments for Interactive Learning",
-    "date": "unknown",
-    "source": "web"
+    "id": "2302.04761",
+    "url": "https://arxiv.org/abs/2302.04761",
+    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
+    "date": "2023-02-09",
+    "source": "arxiv"
   },
   {
     "n": 5,
@@ -41,38 +41,22 @@
   },
   {
     "n": 6,
-    "id": "2210.03629",
-    "url": "https://arxiv.org/abs/2210.03629",
-    "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
-    "date": "2023-03-10",
+    "id": "2010.03768",
+    "url": "https://arxiv.org/abs/2010.03768",
+    "title": "ALFWorld: Aligning Text and Embodied Environments for Interactive Learning",
+    "date": "unknown",
     "source": "web"
   },
   {
     "n": 7,
-    "id": "2302.04761",
-    "url": "https://arxiv.org/abs/2302.04761",
-    "title": "Toolformer: Language Models Can Teach Themselves to Use Tools",
-    "date": "2023-02-09",
-    "source": "arxiv"
+    "id": "rJeXCo0cYX",
+    "url": "https://openreview.net/forum?id=rJeXCo0cYX",
+    "title": "BabyAI: A Platform to Study the Sample Efficiency of Grounded Language Learning",
+    "date": "unknown",
+    "source": "web"
   },
   {
     "n": 8,
-    "id": "2402.01030",
-    "url": "https://arxiv.org/abs/2402.01030",
-    "title": "Executable Code Actions Elicit Better LLM Agents",
-    "date": "2024-06-07",
-    "source": "web"
-  },
-  {
-    "n": 9,
-    "id": "2407.00132",
-    "url": "https://arxiv.org/abs/2407.00132",
-    "title": "ShortcutsBench: A Large-Scale Real-world Benchmark for API-based Agents",
-    "date": "2024-06-28",
-    "source": "web"
-  },
-  {
-    "n": 10,
     "id": "2402.01030",
     "url": "https://huggingface.co/papers/2402.01030",
     "title": "CodeAct: Executable Code Actions Elicit Better LLM Agents",
@@ -80,7 +64,7 @@
     "source": "hf-search"
   },
   {
-    "n": 11,
+    "n": 9,
     "id": "2407.00132",
     "url": "https://huggingface.co/papers/2407.00132",
     "title": "ShortcutsBench: A Large-Scale Real-world Benchmark for API-based Agents",
@@ -88,7 +72,15 @@
     "source": "hf-search"
   },
   {
-    "n": 12,
+    "n": 10,
+    "id": "2407.00132",
+    "url": "https://arxiv.org/abs/2407.00132",
+    "title": "ShortcutsBench: A Large-Scale Real-world Benchmark for API-based Agents",
+    "date": "2024-06-28",
+    "source": "web"
+  },
+  {
+    "n": 11,
     "id": "2604.00835",
     "url": "https://arxiv.org/abs/2604.00835",
     "title": "Agentic Tool Use in Large Language Models: A Survey",

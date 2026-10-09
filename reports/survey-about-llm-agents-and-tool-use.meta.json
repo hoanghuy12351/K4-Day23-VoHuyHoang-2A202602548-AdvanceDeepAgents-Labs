@@ -15,10 +15,27 @@
     "input": 108081,
     "output": 4340
   },
-  "n_sources": 12,
+  "n_sources": 11,
   "source_families": [
     "arxiv",
     "hf-search",
     "web"
+  ],
+  "citation_repairs": [
+    {
+      "model": "ChatOpenAI",
+      "elapsed_s": 31.9,
+      "subagent_calls": 0,
+      "tool_calls": {
+        "edit_file": 7,
+        "execute": 1,
+        "read_file": 4,
+        "write_todos": 2
+      },
+      "tokens": {
+        "input": 170722,
+        "output": 3964
+      }
+    }
   ]
 }
